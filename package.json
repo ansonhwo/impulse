@@ -1,0 +1,24 @@
+{
+  "name": "impulse",
+  "version": "1.0.0",
+  "description": "Enjoy and host music from around the world.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ansonhwo/impulse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ansonhwo/impulse/issues"
+  },
+  "homepage": "https://github.com/ansonhwo/impulse#readme",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "express": "^4.15.0"
+  }
+}
