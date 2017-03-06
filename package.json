@@ -1,0 +1,48 @@
+{
+  "name": "impulse",
+  "version": "1.0.0",
+  "description": "Enjoy and host music from around the world.",
+  "main": "index.js",
+  "scripts": {
+    "build": "run-s build-css watch",
+    "build-css": "node-sass --include-path scss server/public/styles.scss server/public/styles.css",
+    "bundle": "browserify -t babelify client/index.js -o server/public/main.js",
+    "bundle:watch": "watchify -v -t babelify client/index.js -o server/public/main.js",
+    "start": "node server/index.js",
+    "watch": "nodemon server/index.js"
+  },
+  "engines": {
+    "node": "6.9.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ansonhwo/impulse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ansonhwo/impulse/issues"
+  },
+  "homepage": "https://github.com/ansonhwo/impulse#readme",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "express": "^4.15.0",
+    "material-ui": "^0.17.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.23.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.1.0",
+    "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.2",
+    "watchify": "^3.9.0"
+  }
+}
