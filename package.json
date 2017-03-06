@@ -4,7 +4,13 @@
   "description": "Enjoy and host music from around the world.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bundle": "browserify -t babelify client/index.js -p server/public/main.js",
+    "bundle:watch": "watchify -v -t babelify client/index.js -o server/public/main.js",
+    "start": "node server/index.js",
+    "watch": "nodemon server/index.js"
+  },
+  "engines": {
+    "node": "6.9.4"
   },
   "repository": {
     "type": "git",
@@ -19,6 +25,18 @@
   "homepage": "https://github.com/ansonhwo/impulse#readme",
   "dependencies": {
     "body-parser": "^1.17.0",
-    "express": "^4.15.0"
+    "express": "^4.15.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.23.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.1.0",
+    "nodemon": "^1.11.0",
+    "watchify": "^3.9.0"
   }
 }
