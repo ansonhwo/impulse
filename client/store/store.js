@@ -4,4 +4,4 @@ const { mainView } = require('../reducers/reducers')
 
 const reducer = combineReducers({ mainView })
 
-module.exports = createStore(reducer, { }, applyMiddleware(thunk))
+module.exports = createStore(reducer, {}, applyMiddleware(thunk))

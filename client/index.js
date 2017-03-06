@@ -4,14 +4,14 @@ const ReactDOM = require('react-dom')
 const store = require('./store/store')
 
 const { Provider } = require('react-redux')
-const { default: MuiThemeProvider } = require('material-ui/styles/MuiThemeProvider')
+const MuiThemeProvider = require('material-ui/styles/MuiThemeProvider').default
 require('react-tap-event-plugin')()
 
 ReactDOM.render(
-  <Provider store={ store }>
-    <MuiThemeProvider>
+  <MuiThemeProvider>
+    <Provider store={ store }>
       <App />
-    </MuiThemeProvider>
-  </Provider>,
+    </Provider>
+  </MuiThemeProvider>,
   document.getElementById('app')
 )

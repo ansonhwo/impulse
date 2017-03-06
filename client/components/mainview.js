@@ -3,8 +3,8 @@ const { connect } = require('react-redux')
 
 const Landing = require('./landing')
 
-const MainView = ({ view }) => {
-  switch (view) {
+const MainView = ({ mainView }) => {
+  switch (mainView) {
     case 'landing':
       return <Landing />
     default:
@@ -12,10 +12,10 @@ const MainView = ({ view }) => {
   }
 }
 
-const mapProps = state => {
+const mapState = state => {
   return {
     mainView: state.mainView
   }
 }
 
-module.exports = connect(mapProps)(MainView)
+module.exports = connect(mapState)(MainView)
