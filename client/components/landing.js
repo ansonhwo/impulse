@@ -6,7 +6,6 @@ const IconButton = require('material-ui/IconButton').default
 const Headset = require('material-ui/svg-icons/hardware/headset').default
 const ViewList = require('material-ui/svg-icons/action/view-list').default
 
-
 const Landing = ({ openMainMenu, openPlaylistMenu }) => {
   return (
     <div id="landing">
